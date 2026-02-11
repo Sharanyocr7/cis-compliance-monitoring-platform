@@ -1,0 +1,10 @@
+[Unit]
+Description=CIS Agent - collect inventory + CIS checks and send report
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/vboxuser/cis-platform/agent
+ExecStart=/home/vboxuser/cis-platform/agent/cis-agent --config /home/vboxuser/cis-platform/agent/config.yaml
+User=vboxuser

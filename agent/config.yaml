@@ -1,0 +1,16 @@
+agent:
+  name: cis-agent
+  version: "1.0.0"
+  build: "local"
+  schema_version: "1.0"
+
+backend:
+  url: "http://127.0.0.1:8000/api/v1/reports"
+  api_key: "change-me-strong-key"
+
+runtime:
+  timeout_seconds: 25
+  retry_count: 3
+  retry_backoff_ms: 800
+
+
